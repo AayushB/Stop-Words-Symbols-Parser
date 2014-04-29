@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  Query_Parser.cpp
 //  Stop-Word-Symbol-Parser
 //
 //  Created by Aayush Bhandari on 4/28/14.
@@ -34,11 +34,11 @@ int main(int argc, const char * argv[])
     
     
     
-    string rawQuery = argv[1];
-    string stopWordFileName= argv[2];
+    string rawQuery = argv[1];//raw query
+    string stopWordFileName= argv[2];//stop file name
     
     ///This is where I have the file saved.
-    //Users/Aayush/Desktop/GitHubFolders/Stop-Words-Symbols-Parser/Stop-Word-Symbol-Parser/Stop-Word-Symbol-Parser/stoplist.dft"
+    //  /Users/Aayush/Desktop/GitHubFolders/Stop-Words-Symbols-Parser/Stop-Word-Symbol-Parser/Stop-Word-Symbol-Parser/stoplist.dft"
     
     removeCase(rawQuery);//The query is made case insensitive
     rawQuery.erase(remove_if(rawQuery.begin(), rawQuery.end(), isASymbol), rawQuery.end());
@@ -151,6 +151,8 @@ void removeStopWords(vector<string>& tokenizedQuery, string filename)
             }
         }
     }
+    
+    file.close();
 }
 
 

@@ -27,13 +27,18 @@ void removeCase(string &rawQuery);
 
 int main(int argc, const char * argv[])
 {
-
-    string stopWordFileName="/Users/Aayush/Desktop/GitHubFolders/Stop-Words-Symbols-Parser/Stop-Word-Symbol-Parser/Stop-Word-Symbol-Parser/stoplist.dft";
-    string rawQuery;
+    if (argc < 3) { // We expect 3 arguments: the program name, the query and the stop file name
+        std::cerr << "Usage: " << argv[0] << "QUERY STOPWORDSFILE" << std::endl;
+        return 1;
+    }
     
-    //user enters query here..
-    cout << "Please enter the query: ";
-    getline(cin, rawQuery);
+    
+    
+    string rawQuery = argv[1];
+    string stopWordFileName= argv[2];
+    
+    ///This is where I have the file saved.
+    //Users/Aayush/Desktop/GitHubFolders/Stop-Words-Symbols-Parser/Stop-Word-Symbol-Parser/Stop-Word-Symbol-Parser/stoplist.dft"
     
     removeCase(rawQuery);//The query is made case insensitive
     rawQuery.erase(remove_if(rawQuery.begin(), rawQuery.end(), isASymbol), rawQuery.end());

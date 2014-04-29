@@ -28,6 +28,7 @@
 		455668D5190F34DC00714755 /* Stop-Word-Symbol-Parser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Stop-Word-Symbol-Parser"; sourceTree = BUILT_PRODUCTS_DIR; };
 		455668D8190F34DC00714755 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		455668DA190F34DC00714755 /* Stop_Word_Symbol_Parser.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Stop_Word_Symbol_Parser.1; sourceTree = "<group>"; };
+		455668E1190F36A900714755 /* stoplist.dft */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stoplist.dft; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		455668D7190F34DC00714755 /* Stop-Word-Symbol-Parser */ = {
 			isa = PBXGroup;
 			children = (
+				455668E1190F36A900714755 /* stoplist.dft */,
 				455668D8190F34DC00714755 /* main.cpp */,
 				455668DA190F34DC00714755 /* Stop_Word_Symbol_Parser.1 */,
 			);
@@ -227,6 +229,7 @@
 				455668E0190F34DC00714755 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
